@@ -14,7 +14,7 @@ cur.execute("SELECT * FROM weather_data")
 
 column_names = [desc[0] for desc in cur.description]
 
-with open('MySQl/weather_data.csv', 'w', newline='') as csvfile:
+with open('weather_data.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
 
     writer.writerow(column_names)
@@ -26,7 +26,7 @@ cur.execute("SELECT * FROM sky_events")
 
 column_names = [desc[0] for desc in cur.description]
 
-with open('MySQl/sky_events.csv', 'w', newline='') as csvfile:
+with open('sky_events.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
 
     writer.writerow(column_names)
